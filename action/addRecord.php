@@ -1,4 +1,5 @@
 <?php
+   include_once("../header.php");
 
    $description = $_GET['describe'];
    $amount = intval($_GET['amount']);
@@ -7,7 +8,6 @@
    }
    $date = date('Y-m-d');
    
-   $conn = mysqli_connect("164.92.165.156","spent","123123","spent");
    
    
    if(!$conn){

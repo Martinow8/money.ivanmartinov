@@ -1,11 +1,12 @@
 <?php
+inlcude_once("header.php");
+
     if(isset($_GET['submit'])){
         $dateFrom = $_GET['dateFrom'];
         #echo $dateFrom;
         $dateTo = $_GET['dateTo'];
         #echo $dateTo;
         $query="SELECT * FROM spent WHERE date BETWEEN '$dateFrom' AND '$dateTo' ORDER BY date DESC";
-        $conn = mysqli_connect("164.92.165.156","spent","123123","spent");
    
         $result = mysqli_query($conn,$query);
     }
